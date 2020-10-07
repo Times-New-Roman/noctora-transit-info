@@ -2,19 +2,18 @@
 const Discord = require('discord.js');
 
 // Create an instance of a Discord client
-const client = new Discord.Client();
 
 /**
  * The ready event is vital, it means that only _after_ this will your bot start reacting to information
  * received from Discord
  */
-client.on('ready', () => {
+Discord.Client.on('ready', () => {
   console.log('Enabled.');
 });
-client.login('NzYzMTg5NTc5NzI0NjE5Nzg2.X30Frw._ld_6NeEme8SSJ1P503ttxp6TzY');
+Discord.Client.login('NzYzMTg5NTc5NzI0NjE5Nzg2.X30Frw._ld_6NeEme8SSJ1P503ttxp6TzY');
 
 
-client.on('message', message => {
+Discord.Client.on('message', message => {
   // Ignore messages that aren't from a guild
   if (!message.guild) return;
 
